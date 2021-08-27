@@ -1,5 +1,5 @@
 const mongoose = require('../database/mongoose');
-
+//criando o modelo de filmes
 const filmeSchema = new mongoose.Schema({
 
     titulo:{
