@@ -30,4 +30,11 @@ router.post('/cadastro', async(req,res)=>{
     }
 });
 
+app.get('/lista', (req,res)=>{
+    Filme.find().lean().then((filmes)=>{
+        res.send(filmes);
+    })
+})
+
+
 module.exports = app=> app.use('/filme', router);
