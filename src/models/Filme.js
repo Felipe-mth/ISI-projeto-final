@@ -7,6 +7,11 @@ const filmeSchema = new mongoose.Schema({
         unique: true,
         require: true
     },
+    imagem:{
+        type: String,
+        unique: true,
+        require: true,
+    },
     nota:{
         type: Number,
         require: true

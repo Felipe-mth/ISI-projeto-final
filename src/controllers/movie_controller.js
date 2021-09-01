@@ -7,6 +7,7 @@ router.post('/cadastro', async(req,res)=>{
             //salva o que vem do front dentro da variavel data              
             const data = await new Filme({
                 titulo: req.body.titulo,
+                imagem: req.body.imagem,
                 nota: req.body.nota,
                 sinopse: req.body.sinopse,
                 estoque: req.body.estoque
