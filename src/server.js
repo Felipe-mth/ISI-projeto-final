@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 
 //Chama o controller de filmes passando app para ele
 require('./controllers/movie_controller')(app);
+//Chama o controller de series passando app para ele
+require('./controllers/series_controller')(app);
 //página inicial
 app.get('/', (req,res)=>{
     res.send('Home');
