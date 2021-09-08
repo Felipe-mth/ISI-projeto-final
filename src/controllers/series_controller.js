@@ -14,7 +14,7 @@ router.post('/cadastro', async(req,res)=>{
                 temporadas:  req.body.temporadas
             })
             //salva a variavel no banco de dados
-            titulo = await Filme.findOne({titulo: req.body.titulo});
+            titulo = await Serie.findOne({titulo: req.body.titulo});
             if(titulo){
                 res.status(400).send('Erro: Serie já existe')
             }else{
@@ -70,7 +70,7 @@ router.post('/deletar/:titulo', async(req,res)=>{
         }).catch((err)=>{
             res.status(500).send(err)
         })
-        //caso contrario o filme não existe
+        //caso contrario o serie não existe
     }else{
         res.status(404).send('Serie não existe')
     }
