@@ -10,7 +10,8 @@ router.post('/cadastro', async(req,res)=>{
                 titulo: req.body.titulo,
                 nota: req.body.nota,
                 sinopse: req.body.sinopse,
-                estoque: req.body.estoque
+                estoque: req.body.estoque,
+                imagem: req.body.imagem
             })
             titulo = await Filme.findOne({titulo: req.body.titulo});
             if(titulo){
